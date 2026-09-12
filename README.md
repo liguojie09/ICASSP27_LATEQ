@@ -10,7 +10,7 @@ and adds no trainable parameters.
 This release contains method code and documentation: no model weights,
 dataset files, training loops, evaluation scripts, or experiment infrastructure.
 
-![LatEq: anatomical label action, action-aware training, and aligned probability projection](assets/overview.svg)
+![LatEq: anatomical label action, action-aware training, and aligned probability projection](overview.svg)
 
 ## Method
 
