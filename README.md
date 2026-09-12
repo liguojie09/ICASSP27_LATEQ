@@ -10,7 +10,7 @@ and adds no trainable parameters.
 This release contains method code and documentation: no model weights,
 dataset files, training loops, evaluation scripts, or experiment infrastructure.
 
-![LatEq: anatomical label action, action-aware training, and aligned probability projection](overview.svg)
+![LatEq: anatomical label action, action-aware training, and aligned probability projection](assets/overview.svg)
 
 ## Method
 
@@ -20,14 +20,14 @@ during supervision and prediction alignment.
 
 Let $F$ denote the input reflection and $P$ the class permutation, with
 $F^2=P^2=I$. For classifier logits $f_\theta$ and probabilities
-$p=\operatorname{softmax}(f_\theta)$:
+$p=\mathrm{softmax}(f_\theta)$:
 
 **Action-aware training — Fig. 1(b), Eq. (3)**
 
 $$
 \mathcal{L}_{\mathrm{act}} =
-\frac{1}{2}\operatorname{CE}(f_\theta(x),y) +
-\frac{1}{2}\operatorname{CE}(f_\theta(Fx),Py).
+\frac{1}{2}\mathrm{CE}(f_\theta(x),y) +
+\frac{1}{2}\mathrm{CE}(f_\theta(Fx),Py).
 $$
 
 **Aligned probability projection — Fig. 1(c), Eq. (4)**
@@ -135,7 +135,7 @@ left/right class pairs $\mathcal S$ and candidate spatial axis $j$:
 
 $$
 d_j=\frac{1}{|\mathcal S|}\sum_{(l,r)\in\mathcal S}
-\operatorname{MSE}(F_j\mu_l,\mu_r).
+\mathrm{MSE}(F_j\mu_l,\mu_r).
 $$
 
 The selected axis minimizes $d_j$ and improves on the unreflected discrepancy.
